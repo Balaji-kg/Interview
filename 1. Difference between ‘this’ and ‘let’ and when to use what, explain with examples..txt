@@ -1,0 +1,34 @@
+this keyword
+
+1. Any access to this keyword within a function is actually controlled by how the function is actually called. It is commonly referred to as the “calling context.”
+
+2. this is refered by current object
+3. run time exception
+
+
+function get() {
+  console.log(this);
+}
+
+get(); // logs out the global e.g. `window` in browsers
+let bar = {
+  get
+}
+bar.get(); // Logs out `bar` as `get` was called on `bar`
+
+
+
+let
+
+1. this is called by black scoped
+2. this is not case sensitive. can't decalred more than 1 time. example (let value = 'sss' ; let VALUE = 'sss'). 
+3. throw compile time exception
+
+black scope example
+
+var get = 123;
+if (true) {
+    var get= 456;
+}
+console.log(foo); // 456
+

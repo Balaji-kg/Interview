@@ -1,0 +1,22 @@
+
+var inputvalue = ["Hello World", "Hello World"];
+
+var joinvalue = inputvalue.join('');
+
+let result = joinvalue;
+
+[...result].reduce((a, e) => { a[e] = a[e] ? a[e] + 1 : 1; return a }, {});
+
+
+
+output :
+
+" ": 2
+H: 2
+W: 2
+d: 2
+e: 2
+l: 6
+o: 4
+r: 2
+

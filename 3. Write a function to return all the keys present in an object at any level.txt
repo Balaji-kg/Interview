@@ -1,0 +1,11 @@
+const inputArr= {
+    a: 5, b: { c: { d: 10 } }
+};
+
+
+function findallKeys(obj)
+{
+return Object.keys(obj).filter(key=>obj[key] instanceof Object).map(key=>findallKeys(obj[key]).map(k=>`${k}`)).reduce((x,y)=>x.concat(y),Object.keys(obj))
+}
+
+console.log(findallKeys(inputArr));

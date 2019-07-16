@@ -1,0 +1,31 @@
+
+
+Using split and reverse
+
+function spliteReverseString(input) {
+var splitString = input.split("");
+var reverse= splitString.reverse();
+var joinstring = reverse.join("");
+
+return joinstring;
+}
+
+spliteReverseString("balaji");
+ 
+
+2. Recursion method // instead of looping
+
+function reverseString(input) {
+  if (input === "") 
+    return "";
+  
+  else
+    return reverseString(input.substr(1)) + input.charAt(0);
+}
+
+reverseString('balaji');
+
+
+
+
+
